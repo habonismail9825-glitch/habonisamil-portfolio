@@ -1,323 +1,180 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Habon Ismail Aouled | Portfolio</title>
-  <meta name="description" content="Cybersécurité • Cyberhygiène • Sensibilisation | Portfolio de Habon Ismail Aouled" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Habon Ismail Aouled | Portfolio</title>
 
-  <style>
-    :root{
-      --bg:#07142a;
-      --panel:#0b1f3c;
-      --panel2:#0a2346;
-      --text:#eaf2ff;
-      --muted:#b7c7e6;
-      --line:rgba(255,255,255,.10);
+<style>
+:root{
+--bg:#061226;
+--panel:#0b1f3c;
+--text:#eaf2ff;
+--muted:#b7c7e6;
+--line:rgba(255,255,255,.1);
+--blue:#1e90ff;
+--cyan:#00bfff;
+--radius:20px;
+}
 
-      --blue:#1e90ff;
-      --cyan:#00bfff;
+*{box-sizing:border-box}
 
-      --shadow: 0 14px 40px rgba(0,0,0,.45);
-      --radius:20px;
-    }
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Roboto;
+background:linear-gradient(180deg,#061226,#071a33);
+color:var(--text);
+line-height:1.6;
+}
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      color:var(--text);
-      background:
-        radial-gradient(900px 520px at 18% 0%, rgba(30,144,255,.20), transparent 55%),
-        radial-gradient(800px 520px at 88% 10%, rgba(0,191,255,.18), transparent 60%),
-        linear-gradient(180deg, #061226, var(--bg));
-      line-height:1.6;
-    }
+.wrap{
+max-width:1100px;
+margin:auto;
+padding:40px 20px 80px;
+}
 
-    a{color:var(--cyan); text-decoration:none}
-    a:hover{text-decoration:underline}
+.card{
+background:rgba(255,255,255,.04);
+border:1px solid var(--line);
+border-radius:var(--radius);
+padding:25px;
+margin-bottom:20px;
+}
 
-    .wrap{max-width:1100px; margin:0 auto; padding:44px 18px 80px;}
+h1{margin:0;font-size:38px}
+h2{margin-top:0}
+.muted{color:var(--muted)}
 
-    .topbar{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:16px; flex-wrap:wrap;
-      margin-bottom:22px;
-    }
+.avatar{
+width:130px;
+height:130px;
+border-radius:50%;
+object-fit:cover;
+border:2px solid var(--blue);
+box-shadow:0 0 25px rgba(30,144,255,.4);
+margin-bottom:15px;
+}
 
-    .brand{display:flex; gap:12px; align-items:center}
-    .glowdot{
-      width:12px; height:12px; border-radius:999px;
-      background:linear-gradient(135deg, var(--blue), var(--cyan));
-      box-shadow: 0 0 0 6px rgba(30,144,255,.10), 0 0 30px rgba(0,191,255,.25);
-    }
-    .brand small{display:block; color:var(--muted)}
+.btn{
+display:inline-block;
+padding:10px 14px;
+border-radius:12px;
+margin:5px 5px 0 0;
+background:rgba(30,144,255,.15);
+border:1px solid var(--line);
+color:white;
+text-decoration:none;
+}
 
-    .nav{
-      display:flex; gap:10px; flex-wrap:wrap;
-    }
-    .pill{
-      padding:10px 12px; border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-      color:var(--text);
-    }
+.btn:hover{
+background:rgba(0,191,255,.25);
+}
 
-    .gridHero{
-      display:grid; gap:16px;
-      grid-template-columns: 1.2fr .8fr;
-      align-items:stretch;
-    }
-    @media (max-width: 920px){ .gridHero{grid-template-columns:1fr} }
+.tag{
+display:inline-block;
+padding:6px 10px;
+margin:5px 5px 0 0;
+border-radius:999px;
+border:1px solid var(--line);
+background:rgba(255,255,255,.05);
+font-size:13px;
+}
 
-    .card{
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      box-shadow: var(--shadow);
-      padding:22px;
-    }
+.footer{
+margin-top:25px;
+font-size:13px;
+color:var(--muted);
+text-align:center;
+}
 
-    .heroRow{display:flex; gap:18px; align-items:center; flex-wrap:wrap}
-    .avatar{
-      width:120px; height:120px; border-radius:999px;
-      object-fit:cover;
-      border:1px solid rgba(255,255,255,.14);
-      box-shadow: 0 0 0 8px rgba(30,144,255,.10);
-    }
-
-    h1{margin:0; font-size:40px; line-height:1.12}
-    .subtitle{margin:10px 0 0; color:var(--muted)}
-    .tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:14px}
-    .tag{
-      font-size:13px;
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-    }
-
-    .btns{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
-    .btn{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:11px 14px;
-      border-radius:14px;
-      border:1px solid var(--line);
-      background:rgba(30,144,255,.12);
-      color:var(--text);
-    }
-    .btn.secondary{background:rgba(0,191,255,.12)}
-    .btn.ghost{background:rgba(255,255,255,.03)}
-
-    .section{margin-top:16px}
-    .section h2{margin:0 0 10px; font-size:18px; letter-spacing:.2px}
-    .muted{color:var(--muted)}
-
-    .grid3{
-      display:grid; gap:14px;
-      grid-template-columns: repeat(3, 1fr);
-      margin-top:14px;
-    }
-    @media (max-width: 920px){ .grid3{grid-template-columns:1fr} }
-
-    .item{
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:14px;
-      background:rgba(255,255,255,.02);
-    }
-    .item b{display:block; margin-bottom:6px}
-
-    .quote{
-      margin:0;
-      padding:14px;
-      border-left:3px solid var(--cyan);
-      background:rgba(255,255,255,.02);
-      border-radius:12px;
-      color:var(--text);
-    }
-
-    .footer{
-      margin-top:22px; padding-top:14px;
-      border-top:1px solid var(--line);
-      color:var(--muted); font-size:13px;
-    }
-  </style>
+.grid{
+display:grid;
+gap:15px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+</style>
 </head>
 
 <body>
-  <div class="wrap">
 
-    <div class="topbar">
-      <div class="brand">
-        <div class="glowdot"></div>
-        <div>
-          <b>Habon Ismail Aouled</b>
-          <small>Cybersécurité • Cyberhygiène • Sensibilisation</small>
-        </div>
-      </div>
+<div class="wrap">
 
-      <div class="nav">
-        <a class="pill" href="#apropos">À propos</a>
-        <a class="pill" href="#expertise">Expertise</a>
-        <a class="pill" href="#projets">Projets</a>
-        <a class="pill" href="#formation">Formation</a>
-        <a class="pill" href="#contact">Contact</a>
-      </div>
-    </div>
+<div class="card">
+<img src="habon.jpg" class="avatar" alt="Habon Ismail Aouled">
 
-    <div class="gridHero">
-      <!-- HERO -->
-      <div class="card">
-        <div class="heroRow">
-          <!-- ✅ Mets ta photo dans le repo avec ce nom : habon.jpg -->
-          <img class="avatar" src="habon.jpg" alt="Photo de Habon Ismail Aouled" />
-          <div>
-            <div class="muted">👋 Bonjour, je suis</div>
-            <h1>Habon Ismail Aouled</h1>
-            <p class="subtitle">
-              Ingénieure en management & sécurité des SI, passionnée par la cybersécurité.
-              Spécialisation : <b>cyberhygiène</b> et <b>sensibilisation</b> — parce que la sécurité commence par l’humain.
-            </p>
+<h1>Habon Ismail Aouled</h1>
+<p class="muted">
+Ingénieure en Management & Sécurité des Systèmes d’Information.<br>
+Spécialisée en <b>cyberhygiène</b> et <b>sensibilisation</b>.
+</p>
 
-            <div class="btns">
-              <a class="btn" href="mailto:habonismail20182019@gmail.com">📩 Email</a>
-              <a class="btn secondary" href="https://wa.me/25377621001" target="_blank" rel="noreferrer">💬 WhatsApp</a>
-              <a class="btn ghost" href="https://www.linkedin.com/in/habon-ismail-aouled-cybersecurite-cyberhygiene-conseil/" target="_blank" rel="noreferrer">🔗 LinkedIn</a>
-            </div>
+<a class="btn" href="mailto:habonismail20182019@gmail.com">📩 Email</a>
+<a class="btn" href="https://wa.me/25377621001" target="_blank">💬 WhatsApp</a>
+<a class="btn" href="https://www.linkedin.com/in/habon-ismail-aouled-cybersecurite-cyberhygiene-conseil/" target="_blank">🔗 LinkedIn</a>
 
-            <div class="tags">
-              <span class="tag">🔐 Conseil en cybersécurité</span>
-              <span class="tag">🧼 Cyberhygiène</span>
-              <span class="tag">🧑‍🏫 Sensibilisation</span>
-              <span class="tag">🏢 Entreprises</span>
-              <span class="tag">🎓 Jeunes & professionnels</span>
-            </div>
-          </div>
-        </div>
-      </div>
+<div style="margin-top:15px;">
+<span class="tag">🔐 Conseil Cybersécurité</span>
+<span class="tag">🧼 Cyberhygiène</span>
+<span class="tag">🧑‍🏫 Sensibilisation</span>
+<span class="tag">🏢 Entreprises</span>
+<span class="tag">🎓 Jeunes & Professionnels</span>
+</div>
+</div>
 
-      <!-- MESSAGE CLÉ -->
-      <div class="card">
-        <h2 style="margin:0 0 10px;">🎯 Message clé</h2>
-        <p class="quote">“La cybersécurité commence par l’humain : sensibiliser aujourd’hui pour sécuriser demain.”</p>
+<div class="grid">
 
-        <div class="section" id="apropos">
-          <h2>🧕 À propos</h2>
-          <p class="muted" style="margin:0;">
-            Je contribue à construire une culture de sécurité numérique durable, en rendant les bonnes pratiques simples,
-            accessibles et applicables au quotidien.
-          </p>
-        </div>
-      </div>
-    </div>
+<div class="card">
+<h2>🎯 Mission</h2>
+<p class="muted">
+La cybersécurité commence par l’humain.
+Prévenir, former et sensibiliser pour réduire les risques numériques.
+</p>
+</div>
 
-    <!-- 3 CARTES -->
-    <div class="grid3" id="expertise">
-      <div class="card">
-        <h2>🛡️ Expertise</h2>
-        <div class="item">
-          <b>Gouvernance SSI</b>
-          <div class="muted">Approche management, politique SSI, bonnes pratiques.</div>
-        </div>
-        <div class="item" style="margin-top:10px;">
-          <b>Cyberhygiène</b>
-          <div class="muted">Prévention, réflexes sécurité, réduction des risques humains.</div>
-        </div>
-        <div class="item" style="margin-top:10px;">
-          <b>Sensibilisation</b>
-          <div class="muted">Ateliers, campagnes, contenus pédagogiques.</div>
-        </div>
-      </div>
+<div class="card">
+<h2>🛡️ Expertise</h2>
+<p class="muted">
+Gouvernance SSI<br>
+Analyse des risques<br>
+Cyberhygiène<br>
+Sensibilisation & Formation
+</p>
+</div>
 
-      <div class="card">
-        <h2>🧠 Ce que je fais</h2>
-        <div class="item">
-          <b>Former</b>
-          <div class="muted">Jeunes, professionnels et équipes d’entreprise.</div>
-        </div>
-        <div class="item" style="margin-top:10px;">
-          <b>Conseiller</b>
-          <div class="muted">Mesures concrètes, adaptées au contexte.</div>
-        </div>
-        <div class="item" style="margin-top:10px;">
-          <b>Prévenir</b>
-          <div class="muted">Priorité à la prévention avant l’incident.</div>
-        </div>
-      </div>
+<div class="card">
+<h2>📌 Rôle Projet</h2>
+<p class="muted">
+Responsable cybersécurité & cyberhygiène du projet
+Digitalisation – Cybersécurité – Gestion.
+</p>
+</div>
 
-      <div class="card">
-        <h2>📌 Rôle projet</h2>
-        <div class="item">
-          <b>Digitalisation – Cybersécurité – Gestion</b>
-          <div class="muted">
-            Responsable <b>cybersécurité & cyberhygiène</b> : analyse des risques, bonnes pratiques,
-            sensibilisation et intégration de mesures sécurité dans tout le projet.
-          </div>
-        </div>
-      </div>
-    </div>
+</div>
 
-    <!-- PROJETS -->
-    <div class="card section" id="projets">
-      <h2>🚀 Projets</h2>
-      <p class="muted" style="margin-top:0;">
-        (On complétera avec tes vrais projets. Pour l’instant, des exemples élégants.)
-      </p>
+<div class="card">
+<h2>🎓 Formation</h2>
+<p class="muted">
+Master 2 – Management de la Sécurité des Systèmes d’Information<br>
+(Université et année à compléter)
+</p>
+</div>
 
-      <div class="item">
-        <b>📣 Campagne de sensibilisation</b>
-        <div class="muted">Phishing • mots de passe • réseaux sociaux • sécurité mobile.</div>
-      </div>
-      <div class="item" style="margin-top:10px;">
-        <b>🧾 Analyse des risques SSI</b>
-        <div class="muted">Identification menaces/vulnérabilités + recommandations.</div>
-      </div>
-      <div class="item" style="margin-top:10px;">
-        <b>🔐 Plan de cyberhygiène</b>
-        <div class="muted">Checklist utilisateurs + procédures simples + supports formation.</div>
-      </div>
-    </div>
+<div class="card">
+<h2>📩 Contact</h2>
+<p class="muted">
+Email : habonismail20182019@gmail.com<br>
+Téléphone : +253 77621001
+</p>
+</div>
 
-    <!-- FORMATION -->
-    <div class="card section" id="formation">
-      <h2>🎓 Formation</h2>
-      <div class="item">
-        <b>Master 2 – Management de la Sécurité des Systèmes d’Information</b>
-        <div class="muted">Université + année : à compléter (tu me l’enverras plus tard ✅)</div>
-      </div>
-    </div>
+<div class="footer">
+© <script>document.write(new Date().getFullYear())</script> Habon Ismail Aouled
+</div>
 
-    <!-- CONTACT -->
-    <div class="card section" id="contact">
-      <h2>📩 Contact</h2>
-      <div class="item">
-        <b>Email</b>
-        <div class="muted"><a href="mailto:habonismail20182019@gmail.com">habonismail20182019@gmail.com</a></div>
-      </div>
-      <div class="item" style="margin-top:10px;">
-        <b>Téléphone</b>
-        <div class="muted">+253 77621001</div>
-      </div>
-      <div class="item" style="margin-top:10px;">
-        <b>LinkedIn</b>
-        <div class="muted">
-          <a href="https://www.linkedin.com/in/habon-ismail-aouled-cybersecurite-cyberhygiene-conseil/" target="_blank" rel="noreferrer">
-            habon-ismail-aouled-cybersecurite-cyberhygiene-conseil
-          </a>
-        </div>
-      </div>
+</div>
 
-      <div class="footer">
-        © <span id="y"></span> Habon Ismail Aouled — Portfolio
-      </div>
-    </div>
-
-  </div>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
+
    
+

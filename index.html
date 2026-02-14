@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Habon Ismail Aouled | Portfolio</title>
+  <meta name="description" content="Ingénieure en Management & Sécurité des Systèmes d’Information | Conseil en Cybersécurité & Cyberhygiène | Sensibilisation" />
+  <style>
+    :root{
+      --bg:#0b1220; --card:#0f1a31; --text:#e9eefc; --muted:#b7c2e3;
+      --accent:#4dd6ff; --accent2:#7c5cff; --line:rgba(255,255,255,.10);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: radial-gradient(900px 600px at 20% 0%, rgba(77,214,255,.18), transparent 55%),
+                  radial-gradient(700px 500px at 85% 10%, rgba(124,92,255,.18), transparent 60%),
+                  var(--bg);
+      color:var(--text); line-height:1.55;
+    }
+    a{color:var(--accent); text-decoration:none}
+    .wrap{max-width:1060px; margin:0 auto; padding:42px 18px 70px}
+    .card{
+      border:1px solid var(--line); border-radius:18px;
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      box-shadow:var(--shadow);
+      padding:22px; margin-bottom:18px;
+    }
+    .h1{font-size:38px; margin:6px 0 10px}
+    .muted{color:var(--muted)}
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      margin:5px 5px 0 0;
+      background: rgba(77,214,255,.12);
+      color:var(--text);
+    }
+    .btn.secondary{background: rgba(124,92,255,.12)}
+    .tag{
+      display:inline-block;
+      padding:6px 10px;
+      margin:5px 5px 0 0;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      font-size:13px;
+    }
+    .footer{margin-top:20px; color:var(--muted); font-size:13px}
+  </style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="card">
+    <p class="muted">👋 Bonjour, je suis</p>
+    <div class="h1">Habon Ismail Aouled</div>
+    <p class="muted">
+      Titulaire d’un <b>Master 2 en Management de la Sécurité des Systèmes d’Information</b>.
+      Passionnée par la <b>cybersécurité</b> et spécialisée en <b>cyberhygiène</b>.
+      Je crois que la sécurité commence par l’humain : prévenir, sensibiliser, former.
+    </p>
+
+    <a class="btn" href="mailto:habonismail20182019@gmail.com">📩 M’envoyer un email</a>
+    <a class="btn secondary" href="https://wa.me/25377621001" target="_blank">📱 WhatsApp</a>
+    <a class="btn" href="https://www.linkedin.com/in/habon-ismail-aouled-cybersecurite-cyberhygiene-conseil/" target="_blank">🔗 LinkedIn</a>
+
+    <div style="margin-top:15px;">
+      <span class="tag">🔐 Conseil en cybersécurité</span>
+      <span class="tag">🧼 Cyberhygiène</span>
+      <span class="tag">🧑‍🏫 Sensibilisation</span>
+      <span class="tag">🏢 Entreprises</span>
+      <span class="tag">🎓 Jeunes & professionnels</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🎯 Mission</h3>
+    <p class="muted">
+      Développer une culture de sécurité numérique durable en accompagnant
+      les jeunes, professionnels et entreprises vers des pratiques responsables.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>🛡️ Expertise</h3>
+    <p class="muted">
+      Gouvernance SSI • Analyse des risques • Cyberhygiène • Sensibilisation • Formation
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>📌 Rôle dans le projet</h3>
+    <p class="muted">
+      Responsable cybersécurité & cyberhygiène du projet Digitalisation – Cybersécurité – Gestion.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>📩 Contact</h3>
+    <p class="muted">
+      Email : habonismail20182019@gmail.com<br>
+      Téléphone : +253 77621001
+    </p>
+  </div>
+
+  <div class="footer">
+    © <span id="y"></span> Habon Ismail Aouled
+  </div>
+
+</div>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
